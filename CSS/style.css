@@ -1,3 +1,7 @@
+body{
+    background-color: #fff5ed;
+}
+
 /*header*/
 
 .inline-block{
@@ -27,26 +31,22 @@ nav{
 }
 
 
-.navigation{
-    background-color:#fff5ed;
-}
+
 /*hero section*/
 
 .heroimg{
     height: 450px;
     padding: 25px;
     padding-bottom: 0%;
-    background-color:#fff5ed;
 }
 
 .content{
-    
     width: 500px;
     display: inline-block;
 }
 
 .about-me{
-    display: inline-block;
+    display: flex;
     margin-left: 375px;
     position: relative; top: -310px;
     font-family: 'Montserrat', sans-serif;
@@ -67,14 +67,12 @@ nav{
 
 hr{
     border-top: 1px solid #944c50;
-    background-color: #f0e2d7;
     margin: 0%;
 }
 
 main{ 
     padding: 25px;
     padding-top: 0%;
-    background-color: #fff5ed;
 }
 main h1{
     font-family:'Caveat Brush', cursive;
@@ -93,17 +91,6 @@ main h1{
     font-weight: bold;
 }
 
-.skills-and-tools{
-    display: inline-block;
-    width: 25%;
-    vertical-align: top;
-    font-size: 20px;
-    font-family:'Montserrat', sans-serif;
-    line-height: 2em;
-    color:#944c50;
-    position: relative; top: -10px;
-}
-
 .tools{
     margin-top: 30%;
 }
@@ -113,12 +100,6 @@ main h1{
     height: 1510px;
     border-right: 1px solid #944c50;
     position: relative; left: 50px;
-}
-
-.my-work{
-    display: inline-block;
-    width: 72%;
-    position: relative; top: -33px;
 }
 
 h2{
@@ -159,7 +140,30 @@ h2{
     border-radius: 3%;
 }
 
+/*middle section 2.0*/
+
+.flexContainer{
+    display:flex;
+}
+
+.skills-and-tools{
+    width: 25%;
+    vertical-align: top;
+    font-size: 20px;
+    font-family:'Montserrat', sans-serif;
+    line-height: 2em;
+    color:#944c50;
+    position: relative; top: -10px;
+}
+
+.my-work{
+    width: 72%;
+    position: relative; top: -14px;
+}
+
+
 /*footer section*/
+
 footer{
     background-color: #dfc1b8;
 }
@@ -205,3 +209,105 @@ button{
 }
 
 
+@media only screen and (max-width:600px) {
+
+    /*header*/ 
+
+    .bubble{
+        display: none;
+    }
+
+    .heroimg{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    
+    .content img{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-me{ 
+        font-size: 20px;
+        width: 90%;
+        position: relative; top: 5px; right: 350px;
+    }
+    
+    .content{
+        width: 500px;
+        display: inline-block;
+    }
+
+    
+    /*middle*/
+
+    .flexContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .skills-and-tools{
+        width:100%;
+    }
+    .my-work{
+        width:100%;
+        vertical-align: top;
+    }
+
+    .vl{
+        display: none;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    h2{
+        flex-direction: column;
+        vertical-align: text-top;
+    }
+
+    .my-work p{
+        display: none;
+    }
+
+    .nonprofit{
+        flex-direction: column;
+        width: 68%;
+        padding: 30px;
+    }
+
+    .government{
+        flex-direction: column;
+        width: 68%;
+        padding: 30px;
+    }
+
+    .nonprofit img{
+        margin-left: 25px;
+    }
+
+    .government img{
+        margin-left: 25px;
+    }
+
+    .learn-more{
+        margin: 0;
+        position: relative; left: 140px;
+    }
+
+    /*footer*/
+
+    .inline-block-footer-left{
+        margin-left: 210px;
+        margin-top: 50px;
+    } 
+    
+    .inline-block-footer{
+        position: relative; right: 100px;
+
+    }
+
+}
